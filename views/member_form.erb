@@ -1,0 +1,12 @@
+<h1> Add member to <%= @team.teamname() %></h1>
+
+<form action="/members" method="post">
+  <input id='team_id' name='team_id' type='hidden' value='<%= @team.id() %>'>
+  <label for="first">First Name</label>
+  <input id="first" name="first" type="text">
+  <label for="last">Last Name</label>
+  <input id="last" name="last" type="text">
+  <label for="position">Position</label>
+  <input id="position" name="position" type="text">
+  <button class="btn btn-primary" type="submit">Add member</button>
+</form>

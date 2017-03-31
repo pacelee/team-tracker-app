@@ -1,0 +1,17 @@
+<h1>Here is the information about this team</h1>
+
+<ul>
+  <li>Teamname: <%= @team.teamname %></li>
+  <li>Industry: <%= @team.industry %></li>
+  <li>Members:</li>
+  <ul>
+  <% @team.members().each() do |member| %>
+    <li><%= member.first() %> <%= member.last() %> - <%= member.position() %></li>
+  <% end %>
+  </ul>
+</ul>
+
+
+<a href="/teams/<%= @team.id%>/member_form"><button class="btn btn-primary">Add a member to this team</button></a><br><br>
+<a href="/teams"><button class="btn btn-primary">Return to Team List</button></a><br><br>
+<a href="/team_form"><button class="btn btn-primary">Add Another Team</button></a>

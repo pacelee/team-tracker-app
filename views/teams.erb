@@ -1,0 +1,9 @@
+<h1>Teams</h1>
+
+<ul>
+  <% @@teams.each() do |team| %>
+    <li><a href="/teams/<%= team.id() %>"><%= team.teamname %></a></li>
+  <% end %>
+</ul>
+
+<a href="/team_form"><button class="btn btn-primary">Add Another Team</button></a>
